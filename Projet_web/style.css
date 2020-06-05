@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(243, 243, 213);
+}
+.logo{
+    display: flex;
+    float: left;
+}
+#index{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+a{
+    position: relative;
+    display: inline-block;
+    padding: 12px 36px;
+    margin: 10px 0;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
+    border-radius: 40px;
+    background: linear-gradient(90deg,rgb(235, 252, 6),#ff0000);
+    overflow: hidden;
+}
+span{
+    position: absolute;
+    background: #fff;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animate 1s linear infinite;
+}
+@keyframes animate{
+    0%{
+        width: 0px;
+        height: 0px;
+        opacity: 0.5;
+    }
+    100%{
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
+input{
+    padding:3px;
+    border:1px solid rgb(241, 15, 15);
+    border-radius:5px;
+    width:200px;
+    box-shadow:1px 1px 2px rgb(236, 238, 96) inset;
+}
+input:hover{
+    border: 2px solid rgb(255, 145, 0);
+}
+
+
+.container{
+    position: relative;
+}
+
+.container .card {
+    position : relative;
+    width: 320px;
+    height: 450px;
+    background: #b82f2f;
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+
+.container .card:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f3f715;
+    clip-path:  circle(150px at 80% 20% );
+    transition: 0.5s ease-in-out;
+
+}
+.container .card:hover:before{
+    clip-path:  circle(300px at 80% 20% );
+     
+}
+
+.container .card .imgBx{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+.container .card:hover .imgBx{
+    top: 0%;
+    transform: translateY(0%);
+}
+
+.container .card .imgBx .img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    width: 250px;
+}
+.container .card .contentBx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+
+}
+.container .card:hover .contentBx {
+    height: 210px;
+}
+
+.container .card .contentBx .titre {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff
+}
+
+.container .card .contentBx .button{
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+}
+
+.container .card:hover .contentBx .button {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+
+}
+
+.container .card .contentBx .size{
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container .card:hover .contentBx .size {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+
+}
+.box{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    background: #060c21;
+    transition: 0.5s;
+} 
+.box:hover{
+    height: 500px;
+}
+
+.box .ImageBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.box .ImageBox .us {
+    max-width: 100%;
+    opacity: 0.1;
+    transition: 0.5s;
+}
+
+.box:hover .ImageBox .us{
+    opacity: 1;
+}
+.box:before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+}
+.box:after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+    filter: blur(40px);
+}
+.box:before,
+.box:after
+{
+    background: linear-gradient(235deg, #f81808, #ff6804, #e6ff02);
+}
+
+.box .infoBox{
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    height: 90px;
+    background: #060c21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: 0.5s;    
+}
+
+.box:hover .infoBox {
+    opacity: 1; 
+}
+.nous{
+    color: #fff;
+}
+.box .InfoBox .nous {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    letter-spacing: 1px;
+}
+.pres{
+    text-align: center;
+}
+.h1nous{
+    position: relative;
+    font-size: 50px;
+}
