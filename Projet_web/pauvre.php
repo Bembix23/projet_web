@@ -6,7 +6,7 @@
         </head>
         <body>
             <img src="logo.png">
-            <span>Vous n'avez pas assez d'argent sur votre compte</span>
+            <p>Vous n'avez pas assez d'argent sur votre compte</p> 
             <a href="modif_mon_profil.php" class = "link_home">Modifier le Profil</a>
         </body>
     </html>

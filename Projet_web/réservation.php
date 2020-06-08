@@ -123,18 +123,23 @@
     $info_mail = $query_mail->fetch();
 
 
-    //Mail
-    $dest = $_SESSION["mail_adress"];
-    $dest2 = $info_mail["mail_adress"];
-    $sujet = "Email de test";
-    $message = "Salut ceci est un email de test envoyer par un script PHP";
-    $headers = "From: gauthier.michon@gmail.com";
+   //Mail
+   $dest = $_SESSION["mail_adress"];
+   $dest2 = $info_mail["mail_adress"];
+   $sujet = "Email de test";
+   $message = "Bonjour, votre réservation a été prise en compte !";
+   $headers = "From: gauthier.michon@gmail.com";
 
-    mail($dest, $sujet, $message, $headers);
-    mail($dest2, $sujet, $message, $headers);
+   if (mail($dest, $sujet, $message, $headers)) {
+       echo "Email envoyé avec succès à $dest ...";
+     } else {
+       echo "Échec de l'envoi de l'email...";
+     }
 
-    header("Location: home.php");
-    exit;
-
+   if (mail($dest2, $sujet, $message, $headers)) {
+   echo "Email envoyé avec succès à $dest2 ...";
+   } else {
+   echo "Échec de l'envoi de l'email...";
+   }
 
 ?>
