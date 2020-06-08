@@ -19,11 +19,13 @@ body{
     position: relative;
 }
 .nav{
+    padding: 10px;
     float: right;
+    display: flex;
     align-items: center;
     flex-direction: column;
-    
 }
+
 
 .recherche{
     display: flex;
@@ -45,7 +47,6 @@ body{
 }
 .action{
     display: flex;
-    float: center;
     align-items: center;
     flex-direction: column;
 }
@@ -57,12 +58,62 @@ body{
     width: 900px;
     height: 700px;
 }
+.co{ 
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.logo_profil{
+    margin-top: 20px;
+    float: left;
+}
+.nav_profile{
+    float: right;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.annonces_profile{
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 140vh;
+}
+.quoi{
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.modif{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.back{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 a{
     position: relative;
     display: inline-block;
     padding: 12px 36px;
-    margin: 10px 0;
+    margin: 10px 10px;
     color: rgb(0, 0, 0);
     text-decoration: none;
     text-transform: uppercase;

@@ -19,7 +19,7 @@
 <!DOCTYPE html>
     <html>
         <head>
-            <title>Index</title>
+            <title>Firebee'n B</title>
             <link rel="stylesheet" href="style.css" type="text/css">
         </head>
         <body>
@@ -43,9 +43,9 @@
                 </form>
             </div>
             <div class="action">
-                <a href="create_offre.php" class = "new_offre">Proposer une offre d'hébergement</a><br>
-                <a href="mon_profil.php" class = "profil">Acceder à mon compte</a><br>
-                <a href="nous.php" class = "link_home">Qui sommes nous ?</a><br>
+                <a href="create_offre.php" >Proposer une offre d'hébergement</a><br>
+                <a href="mon_profil.php" >Acceder à mon compte</a><br>
+                <a href="nous.php" >Qui sommes nous ?</a><br>
                 <a href="deconnexion.php">Se déconnecter</a><br>
                 <script type="text/javascript">
                     const buttons = document.querySelectorAll('a');

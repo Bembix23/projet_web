@@ -136,7 +136,7 @@
 <!DOCTYPE html>
     <html>
         <head>
-            <title>Mes offres</title>
+            <title>Les offres</title>
             <link rel="stylesheet" href="style.css" type="text/css">
         </head>
         <body>
