@@ -172,7 +172,7 @@
                                     echo '</div>';
                                 echo '</div>';
                             echo '</div>';
-
+    
                         }
                         }
                     }
@@ -203,7 +203,8 @@
                             }
                         }
                     ?>
-                
+
+                <a href="index.php" class = "link_home">Retour</a>'
                 <script type="text/javascript">
                     const buttons = document.querySelectorAll('a');
                     buttons.forEach(btn => {

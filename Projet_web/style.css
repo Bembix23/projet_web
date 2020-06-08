@@ -72,6 +72,7 @@ input:hover{
 
 .container{
     position: relative;
+    padding: 30px;
 }
 
 .container .card {

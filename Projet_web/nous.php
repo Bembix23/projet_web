@@ -36,5 +36,25 @@
                     <h3 class="nous">Jules Dupuis</h3>
                 </div>
             </div> 
+            <a href="index.php" class = "link_home">Retour</a>
+            <script type="text/javascript">
+                    const buttons = document.querySelectorAll('a');
+                    buttons.forEach(btn => {
+                        btn.addEventListener('click', function(e) {
+
+                            let x = e.clientX - e.target.offsetLeft;
+                            let y = e.clientY - e.target.offsetTop;
+
+                            let ripples = document.createElement('span');
+                            ripples.style.left = x + 'px';
+                            ripples.style.top = y + 'px';
+                            this.appendChild(ripples);
+
+                            setTimeOut(() => {
+                                ripples.remove()
+                            },1000);
+                        })
+                    })
+                </script>
         </body>
     </html>
