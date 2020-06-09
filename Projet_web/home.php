@@ -28,7 +28,7 @@
                 <img src="logo.png"><h1>Firebee'n B</h1>
             </div>
             <div class="votete">
-                <?php echo "<img class='img' src='{$fileDestination}'>";?>
+                <?php echo "<img class='vous' src='{$fileDestination}' widht=50px>";?>
             </div>
            
             <div class="rechercheH">

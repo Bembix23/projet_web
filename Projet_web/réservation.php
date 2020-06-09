@@ -29,7 +29,7 @@
         $query->execute();
         $infos = $query->fetch();
         if (!empty($infos)){
-            header("Location: home.php");
+            header("Location: date_prise.php");
             exit;
         }
     }
@@ -43,7 +43,7 @@
 
 
     if ($_POST["nombre_locataire"] > $infos_chambre["nb_place"]) {
-        header("Location: recherche.php");
+        header("Location: pas_assez_place.php");
         exit;
     }
 
@@ -61,7 +61,6 @@
     WHERE id = {$infos_chambre['id_annonceur']}
     ");
     $query_budget2->execute();
-    $infos_budget2 = $query_budget2->fetch();
 
 
     $query_prix_total = $pdo->prepare("SELECT DATEDIFF('{$test2}', '{$test}')*{$infos_chambre['prix_nuit']}*{$infos_chambre['nb_place']} AS 'prix'
@@ -78,7 +77,23 @@
         exit;
     }
 
+    
 
+    //Requête infos de l'annonce
+    $query_annonce = $pdo->prepare("SELECT * FROM ProjetWeb.annonce
+    WHERE id = {$_GET['id']}
+    ");
+    $query_annonce->execute();
+    $infos_annonce = $query_annonce->fetch();
+
+
+
+    //Requête solde de l'annonceur
+    $query_solde = $pdo->prepare("SELECT * FROM ProjetWeb.profil
+    WHERE id = {$infos_annonce['id_annonceur']}
+    ");
+    $query_solde->execute();
+    $infos_budget2 = $query_solde->fetch();
 
 
     //Requête réservation
@@ -86,6 +101,7 @@
     VALUES ({$_GET['id']}, {$_SESSION['id']}, '{$test}', '{$test2}', (SELECT DATEDIFF('{$test2}', '{$test}')), (SELECT prix_nuit FROM annonce WHERE id = {$_GET['id']}))
     ");
     $query2->execute();
+
 
     //Requête des dates réservés
     for($i = $debut_date; $i < $fin_date; $i+=86400) {
@@ -112,6 +128,7 @@
     $query_new_budget2->execute();
 
 
+
     //Requête mail de l'annonceur
 
     $query_mail = $pdo->prepare("SELECT DISTINCT p.mail_adress FROM ProjetWeb.profil p
@@ -123,12 +140,16 @@
     $info_mail = $query_mail->fetch();
 
 
+
+
+
    //Mail
    $dest = $_SESSION["mail_adress"];
    $dest2 = $info_mail["mail_adress"];
-   $sujet = "Email de test";
-   $message = "Bonjour, votre réservation a été prise en compte !";
-   $headers = "From: gauthier.michon@gmail.com";
+   $sujet = "Confirmation de réservation";
+   $message = "Bonjour, votre réservation du bien {$infos_annonce['titre']} du {$test} au {$test2} a été prise en compte !";
+   $message2 = "Bonjour, votre bien {$infos_annonce['titre']} a été réservé par {$_SESSION['prenom']} {$_SESSION['nom']}, du {$test} au {$test2}";
+   $headers = "From: projetwebynov@gmail.com";
 
    if (mail($dest, $sujet, $message, $headers)) {
        echo "Email envoyé avec succès à $dest ...";
@@ -136,7 +157,7 @@
        echo "Échec de l'envoi de l'email...";
      }
 
-   if (mail($dest2, $sujet, $message, $headers)) {
+   if (mail($dest2, $sujet, $message2, $headers)) {
    echo "Email envoyé avec succès à $dest2 ...";
    } else {
    echo "Échec de l'envoi de l'email...";

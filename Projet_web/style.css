@@ -5,7 +5,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+body{ 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,24 +39,30 @@ body{
     margin: 10px;
 }
 .rechercheH{
-    display: flex;
     position: relative;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 .action{
+    position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 .votete{
+    margin: 20px;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 900px;
-    height: 700px;
+}
+.vous{ 
+    background-size: cover;
+    width: 300px;
+    height: 400px;
 }
 .co{ 
     min-height: 100vh;
@@ -86,6 +92,16 @@ body{
     flex-direction: column;
     min-width: 140vh;
 }
+.monq{
+    background-size: cover;
+    width: 500px;
+    height: 300px;
+}
+.imgAA{
+    background-size: cover;
+    width: 700px;
+    height: 500px;
+}
 .quoi{
     margin: 10px;
     padding: 10px;
@@ -107,6 +123,84 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+.ma{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.ma1{
+    position: relative;
+}
+.logo_A{
+    position: relative;
+    float: left;
+    margin-right: 20px;
+}
+.info_ann{
+    margin-top: 20px;
+    margin-right: 180px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 160vh;
+}
+.modif_1{
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.descrip{
+    margin-top: 20px;
+}
+.nom_A{
+    text-decoration: underline;
+}
+.AAA{
+    position: relative;
+}
+.descrip_1{
+    margin-top: 20px;
+    margin-right: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 160vh;
+}
+.reserv_C{
+    padding: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.reserv_D{
+    padding: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.info_AA{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.pauvre{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 90vh;
+}
+.tpauvre{
+    font-size: large;
 }
 
 a{
@@ -169,111 +263,53 @@ input{
 input:hover{
     border: 2px solid rgb(255, 145, 0);
 }
-
-
-.container{
-    position: relative;
-    padding: 30px;
+.card{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 30px;
+    padding: 0 30px;
+}
+.item{
+    margin-bottom: 2rem;
+    transition: box-shadow .3s;
+    padding: 0 20px;
+    background: linear-gradient(235deg, #f81808, #ff6804, #e6ff02);
+}
+.item:hover{
+    animation-name: ad;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes ad{
+    0%{
+        box-shadow: 0 0 10px #f81808;
+    }
+    25%{
+        box-shadow: 0 0 10px #ff6804;
+    }
+    50%{
+        box-shadow: 0 0 10px #e6ff02;
+    }
+    75%{
+        box-shadow: 0 0 10px #ff6804;
+    }
+    to{
+        box-shadow: 0 0 10px #f81808;
+    }
+    
+}
+.item .Atit{
+    margin: 1rem 0 0 0.5rem 0;
+}
+.item .Ddes{
+    margin: 0 0 1rem 0;
+}
+.item .img{
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    display: block;
 }
 
-.container .card {
-    position : relative;
-    width: 320px;
-    height: 450px;
-    background: #b82f2f;
-    border-radius: 20px;
-    overflow: hidden;
-
-}
-
-.container .card:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #f3f715;
-    clip-path:  circle(150px at 80% 20% );
-    transition: 0.5s ease-in-out;
-
-}
-.container .card:hover:before{
-    clip-path:  circle(300px at 80% 20% );
-     
-}
-
-.container .card .imgBx{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10000;
-    width: 100%;
-    height: 220px;
-    transition: 0.5s;
-}
-.container .card:hover .imgBx{
-    top: 0%;
-    transform: translateY(0%);
-}
-
-.container .card .imgBx .img{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-25deg);
-    width: 250px;
-}
-.container .card .contentBx {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    text-align: center;
-    transition: 1s;
-    z-index: 10;
-
-}
-.container .card:hover .contentBx {
-    height: 210px;
-}
-
-.container .card .contentBx .titre {
-    position: relative;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: #fff
-}
-
-.container .card .contentBx .button{
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
-    font-weight: 600;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: 0.5s;
-}
-
-.container .card:hover .contentBx .button {
-    opacity: 1;
-    transform: translateY(0px);
-    transition-delay: 0.75s;
-
-}
-
-.container .card .contentBx .size{
-    transition: 0.5s;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.container .card:hover .contentBx .size {
-    opacity: 1;
-    visibility: visible;
-    transition-delay: 0.5s;
-
-}
 .box{
     position: relative;
     width: 300px;

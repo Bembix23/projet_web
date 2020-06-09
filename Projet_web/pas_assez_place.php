@@ -6,13 +6,10 @@
         </head>
         <body>
             <div class="pauvre">
-                <div class="logo_P">
-                    <img src="logo.png">
-                </div>
-                <div class="pauvre_I">
-                    <p class="tpauvre">Vous n'avez pas assez d'argent sur votre compte</p> 
-                    <a href="modif_mon_profil.php" class = "link_home">Modifier le Profil</a>
-                    <script type="text/javascript">
+                <img src="logo.png">
+                <p>Il n'y a pas assez de place.</p> 
+                <a href="home.php" class = "link_home">Home</a>
+                <script type="text/javascript">
                         const buttons = document.querySelectorAll('a');
                         buttons.forEach(btn => {
                             btn.addEventListener('click', function(e) {
@@ -31,7 +28,6 @@
                             })
                         })
                     </script>
-                </div>
             </div>
             
         </body>

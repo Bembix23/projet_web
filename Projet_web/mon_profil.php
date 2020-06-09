@@ -38,13 +38,12 @@
 
                         echo "<p>{$infos['titre']}</p><br>";
 
-                        echo "<img src={$fileDestination}><br>";
+                        echo "<img class='monq' src={$fileDestination}><br>";
                         }
                     ?>
                 </div>
                 
-                
-                <a href="index.php" class = "link_home">Retour</a>
+            
                 <script type="text/javascript">
                         const buttons = document.querySelectorAll('a');
                         buttons.forEach(btn => {
