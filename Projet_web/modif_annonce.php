@@ -35,7 +35,7 @@
                             $fileDestination = "./annonces/".$str_titre."/".$str_titre.".png";
 
                             echo "<h1 class='nom_A'>{$infos['titre']}</h1><br>";
-                            echo "<img src='{$fileDestination}'<br>";
+                            echo "<img class='monq2' src='{$fileDestination}'<br>";
                             echo "<h3 class='descrip'>{$infos['description']}</h3><br>";
                         }
                     ?>
@@ -62,28 +62,30 @@
                     </form>
                 </div>
 
-               
-                <?php echo "<a href=$filedelete >Supprimer l'offre</a>"?>
-                <a href="mes_annonces.php" class = "link_home">Retour</a>
-                <script type="text/javascript">
-                        const buttons = document.querySelectorAll('a');
-                        buttons.forEach(btn => {
-                            btn.addEventListener('click', function(e) {
+                <div class="back_to">
+                    <?php echo "<a href=$filedelete >Supprimer l'offre</a>"?>
+                    <a href="mes_annonces.php" class = "link_home">Retour</a>
+                    <script type="text/javascript">
+                            const buttons = document.querySelectorAll('a');
+                            buttons.forEach(btn => {
+                                btn.addEventListener('click', function(e) {
 
-                                let x = e.clientX - e.target.offsetLeft;
-                                let y = e.clientY - e.target.offsetTop;
+                                    let x = e.clientX - e.target.offsetLeft;
+                                    let y = e.clientY - e.target.offsetTop;
 
-                                let ripples = document.createElement('span');
-                                ripples.style.left = x + 'px';
-                                ripples.style.top = y + 'px';
-                                this.appendChild(ripples);
+                                    let ripples = document.createElement('span');
+                                    ripples.style.left = x + 'px';
+                                    ripples.style.top = y + 'px';
+                                    this.appendChild(ripples);
 
-                                setTimeOut(() => {
-                                    ripples.remove()
-                                },1000);
+                                    setTimeOut(() => {
+                                        ripples.remove()
+                                    },1000);
+                                })
                             })
-                        })
-                    </script>
+                        </script>
+                </div>
+                
             </div>
            
         </body>

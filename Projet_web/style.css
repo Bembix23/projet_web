@@ -63,6 +63,7 @@ body{
     background-size: cover;
     width: 300px;
     height: 400px;
+    border-radius: 15px;
 }
 .co{ 
     min-height: 100vh;
@@ -96,6 +97,10 @@ body{
     background-size: cover;
     width: 500px;
     height: 300px;
+    border-radius: 15px;
+}
+.monq2{
+    border-radius: 15px;
 }
 .imgAA{
     background-size: cover;
@@ -152,6 +157,14 @@ body{
     margin-top: 20px;
     padding: 10px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.back_to{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
 }
 .descrip{
@@ -227,7 +240,7 @@ a:hover{
         transform: scale(1, 1);
     }
     50%{
-        transform: scale(1.2 ,1.2);
+        transform: scale(1.1 ,1.1);
     }
     to{
         transform: scale(1, 1);
@@ -263,51 +276,46 @@ input{
 input:hover{
     border: 2px solid rgb(255, 145, 0);
 }
+
+.container{
+    padding: 20px;
+    margin: 20px;
+}
+
 .card{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-column-gap: 30px;
-    padding: 0 30px;
+    display: flex;
+    background: #d3ceceee;
+    transition: box-shadow .3s;
+    width: 400px;
+    height: 500px;
+    border-radius: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card:hover{
+    box-shadow: 0 0 20px #ff6804;
 }
 .item{
-    margin-bottom: 2rem;
-    transition: box-shadow .3s;
-    padding: 0 20px;
-    background: linear-gradient(235deg, #f81808, #ff6804, #e6ff02);
-}
-.item:hover{
-    animation-name: ad;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
-@keyframes ad{
-    0%{
-        box-shadow: 0 0 10px #f81808;
-    }
-    25%{
-        box-shadow: 0 0 10px #ff6804;
-    }
-    50%{
-        box-shadow: 0 0 10px #e6ff02;
-    }
-    75%{
-        box-shadow: 0 0 10px #ff6804;
-    }
-    to{
-        box-shadow: 0 0 10px #f81808;
-    }
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -45px;
+    border-radius: 40px;
 }
 .item .Atit{
+    margin-top: 5px;
     margin: 1rem 0 0 0.5rem 0;
 }
 .item .Ddes{
     margin: 0 0 1rem 0;
 }
 .item .img{
-    width: calc(100% + 40px);
-    margin-left: -20px;
-    display: block;
+    background-size: cover;
+    width: 375px;
+    height: 275px;
+    border-radius: 40px;
 }
 
 .box{

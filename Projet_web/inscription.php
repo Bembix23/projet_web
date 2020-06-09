@@ -6,6 +6,7 @@
         </head>
         <body>
             <div class="co">
+                <img src="logo.png">
                 <form action="vérif_inscription.php" enctype='multipart/form-data' method="post">
                     <input type="text" name="nom" placeholder="NOM">
                     <input type="text" name="prenom" placeholder="PRENOM">

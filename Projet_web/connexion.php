@@ -6,6 +6,7 @@
         </head>
         <body>
             <div class="co">
+                <img src="logo.png">
                 <div class="coco">
                     <form action="vérif_connexion.php" method="post">
                         <input type="email" name="email" placeholder="Adresse mail" />

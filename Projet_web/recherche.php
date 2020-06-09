@@ -118,7 +118,7 @@
             <link rel="stylesheet" href="style.css" type="text/css">
         </head>
         <body>
-            <img src="logo.png">
+            <img class="logo_A" src="logo.png">
                 <?php if (isset($_SESSION["Date_arrivé"]) && isset($_SESSION["Date_départ"])) {
                     $x = array();
                     while($infos = $query->fetch()) {
@@ -174,7 +174,7 @@
                         }
                     ?>
 
-                <a href="index.php" class = "link_home">Retour</a>'
+                <a href="index.php" class = "link_home">Retour</a>
                 <script type="text/javascript">
                     const buttons = document.querySelectorAll('a');
                     buttons.forEach(btn => {

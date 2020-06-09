@@ -6,6 +6,7 @@
         </head>
         <body>
             <div class="co">
+                <img src="logo.png">
                 <form action="vérif_create_offre.php" enctype='multipart/form-data' method="post">
                     <input type="text" name="titre" placeholder="TITRE">
                     <input type="text" name="description" placeholder="DESCRIPTION">
