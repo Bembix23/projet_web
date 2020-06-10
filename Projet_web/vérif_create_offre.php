@@ -4,7 +4,7 @@
 
     include("config.php");
 
-    if ($_POST["titre"] == null || $_POST["description"] == null || $_POST["nb_place"] == null || $_POST["adresse"] == null || $_POST["ville"] == null || $_POST["prix_nuit"] == null){
+    if ($_POST["titre"] == null || $_POST["description"] == null || $_POST["nb_place"] == null || $_POST["adresse"] == null || $_POST["ville"] == null || $_POST["prix_nuit"] == null || $_POST["latitude"] == null || $_POST["longitude"] == null){
         header("Location: index.php");
         exit;
     }
@@ -29,8 +29,8 @@
         move_uploaded_file($fileTmpName, $fileDestination);
     }
 
-    $query = $pdo->prepare("INSERT INTO ProjetWeb.annonce (id_annonceur, titre, description, nb_place, adresse, ville, prix_nuit)
-        VALUES ('{$_SESSION["id"]}', '{$_POST["titre"]}', '{$_POST["description"]}', '{$_POST["nb_place"]}', '{$_POST["adresse"]}', '{$_POST["ville"]}', '{$_POST["prix_nuit"]}')
+    $query = $pdo->prepare("INSERT INTO ProjetWeb.annonce (id_annonceur, titre, description, nb_place, adresse, ville, prix_nuit, latitude, longitude)
+        VALUES ('{$_SESSION["id"]}', '{$_POST["titre"]}', '{$_POST["description"]}', '{$_POST["nb_place"]}', '{$_POST["adresse"]}', '{$_POST["ville"]}', '{$_POST["prix_nuit"]}', '{$_POST["latitude"]}', '{$_POST["longitude"]}')
     ");
     $query->execute();
 

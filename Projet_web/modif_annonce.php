@@ -12,6 +12,8 @@
 
     $filetitre = "modif_titre_annonce.php?id=" . $_GET["id"];
     $filedescription = "modif_description_annonce.php?id=" . $_GET["id"];
+    $filelat = "modif_latitude_annonce.php?id=" . $_GET["id"];
+    $filelong = "modif_longitude_annonce.php?id=" . $_GET["id"];
     $fileimage = "modif_image_annonce.php?id=" . $_GET["id"];
     $filedelete = "delete_annonce.php?id=" . $_GET["id"];
 
@@ -51,6 +53,20 @@
                     <h3>Ci-dessous, vous pouvez modifier la description de l'annonce:</h3>
                     <?php echo "<form action=$filedescription method='post'>"?>
                     <input type= "text" name="new_description" placeholder="Nouvelle description" />
+                    <button type= "submit"> Modifier</button>
+                    </form>
+                </div>
+                <div class="modif_1">
+                    <h3>Ci-dessous, vous pouvez modifier la latitude de l'annonce:</h3>
+                    <?php echo "<form action=$filelat method='post'>"?>
+                    <input type= "text" name="new_lat" placeholder="Nouvelle latitude" />
+                    <button type= "submit"> Modifier</button>
+                    </form>
+                </div>
+                <div class="modif_1">
+                    <h3>Ci-dessous, vous pouvez modifier la longitude de l'annonce:</h3>
+                    <?php echo "<form action=$filelong method='post'>"?>
+                    <input type= "text" name="new_long" placeholder="Nouvelle longitude" />
                     <button type= "submit"> Modifier</button>
                     </form>
                 </div>

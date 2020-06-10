@@ -16,8 +16,8 @@
                     <input type="text" name="ville" placeholder="Ville" />
                     <input type="number" name="prix_nuit" placeholder="Prix pour une nuit" />
                     <input type='file' name='file' id='file'>
-                    <input type="text" name='lat' placeholder='Latitude'>
-                    <input type="text" name='long' placeholder='Longitude'>
+                    <input type="text" name='latitude' placeholder='Latitude'>
+                    <input type="text" name='longitude' placeholder='Longitude'>
                     <button type="submit" name='submit' value='Upload'>Envoyer</button>
                 </form>
                 <a href="index.php" class = "a">Retour</a>

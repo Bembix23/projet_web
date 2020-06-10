@@ -6,6 +6,10 @@
     $query = $pdo->prepare("SELECT * FROM ProjetWeb.annonce WHERE id = {$_GET['id']}");
     $query->execute();
     $infos = $query->fetch();
+
+    $lat = (float)$infos["latitude"];
+    $lon = (float)$infos["longitude"];
+
     
 ?>
 
@@ -17,8 +21,8 @@
             <script src="https://maps.google.com/maps/api/js?key=AIzaSyAR72-2cHpkYIr7Mklz1jPeN7ISheBqtQE" type="text/javascript"></script>
             <script async type="text/javascript">
             // On initialise la latitude et la longitude de Paris (centre de la carte)
-                var lat = 48.852969;
-                var lon = 2.349903;
+                var lat = <?php echo $lat ?>;
+                var lon = <?php echo $lon ?>;
                 var map = null;
                 // Fonction d'initialisation de la carte
                 function initMap() {
@@ -125,8 +129,8 @@
                         //Si l'utilisateur n'est pas connecté, affiche les boutons connexion et inscription
                             else {
                                 echo "Vous devez être connecté pour réservé un bien";
-                                echo '<a href="connexion.php" class = "link_home">Connexion</a>
-                                <a href="inscription.php" class = "link_home">Inscription</a><br>';
+                                echo '<a href="connexion.php" class = "a">Connexion</a>
+                                <a href="inscription.php" class = "a">Inscription</a><br>';
                             }
                         ?>
                 </div>
