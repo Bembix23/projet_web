@@ -11,7 +11,7 @@
                 </div>
                 <div class="pauvre_I">
                     <p class="tpauvre">Vous n'avez pas assez d'argent sur votre compte</p> 
-                    <a href="modif_mon_profil.php" class = "link_home">Modifier le Profil</a>
+                    <a href="modif_mon_profil.php" class = "a">Modifier le Profil</a>
                     <script type="text/javascript">
                         const buttons = document.querySelectorAll('a');
                         buttons.forEach(btn => {

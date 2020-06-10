@@ -46,10 +46,10 @@
                 </form>
             </div>
             <div class="action">
-                <a href="create_offre.php" >Proposer une offre d'hébergement</a><br>
-                <a href="mon_profil.php" >Acceder à mon compte</a><br>
-                <a href="nous.php" >Qui sommes nous ?</a><br>
-                <a href="deconnexion.php">Se déconnecter</a><br>
+                <a class="a" href="create_offre.php" >Proposer une offre d'hébergement</a><br>
+                <a class="a" href="mon_profil.php" >Acceder à mon compte</a><br>
+                <a class="a" href="nous.php" >Qui sommes nous ?</a><br>
+                <a class="a" href="deconnexion.php">Se déconnecter</a><br>
                 <script type="text/javascript">
                     const buttons = document.querySelectorAll('a');
                     buttons.forEach(btn => {

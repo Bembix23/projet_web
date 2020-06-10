@@ -22,9 +22,9 @@
                     <img src="logo.png"><h1>Firebee'n B</h1>
                 </div>
                 <div class="nav">
-                    <a href="connexion.php" class = "link_home">Connexion</a>
-                    <a href="inscription.php" class = "link_home">Inscription</a><br>
-                    <a href="nous.php" class = "link_home">Qui sommes nous ?</a>
+                    <a href="connexion.php" class = "a">Connexion</a>
+                    <a href="inscription.php" class = "a">Inscription</a><br>
+                    <a href="nous.php" class = "a">Qui sommes nous ?</a>
                     
                 </div>    
                 <div class="recherche">  

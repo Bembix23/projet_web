@@ -8,7 +8,7 @@
             <div class="pauvre">
                 <img src="logo.png">
                 <p>Il n'y a pas assez de place.</p> 
-                <a href="home.php" class = "link_home">Home</a>
+                <a href="home.php" class = "a">Home</a>
                 <script type="text/javascript">
                         const buttons = document.querySelectorAll('a');
                         buttons.forEach(btn => {

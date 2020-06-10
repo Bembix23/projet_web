@@ -176,7 +176,7 @@
                                         ?><img class="img" <?php echo "src= {$fileDestination}"?>> <?php
                                         echo "<h2 class='Atit'>{$infos['titre']}</h2><br>";
                                         echo "<h3 class='Ddes'>{$infos['description']}</h3>";
-                                        echo "<a class='button' href='annonce.php?id={$infos["id"]}'>Destination</a>";
+                                        echo "<a class='a' href='annonce.php?id={$infos["id"]}'>Destination</a>";
                                     echo '</div>';
                                 echo '</div>';
                             echo '</div>';
@@ -199,7 +199,7 @@
                                         ?><img class="img" <?php echo "src= {$fileDestination}"?>> <?php
                                         echo "<h2 class='Atit'>{$infos['titre']}</h2><br>";
                                         echo "<h3 class='Ddes'>{$infos['description']}</h3>";
-                                        echo "<a class='button' href='annonce.php?id={$infos["id"]}'>Destination</a>";
+                                        echo "<a class='a' href='annonce.php?id={$infos["id"]}'>Destination</a>";
                                     echo '</div>';
                                 echo '</div>';
                             echo '</div>';
@@ -208,7 +208,7 @@
                         }
                     ?>
 
-                <a href="index.php" class = "link_home">Retour</a>
+                <a href="index.php" class = "a">Retour</a>
                 <script type="text/javascript">
                     const buttons = document.querySelectorAll('a');
                     buttons.forEach(btn => {

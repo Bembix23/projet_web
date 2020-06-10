@@ -26,9 +26,9 @@
                     <h1><img src="logo.png"></h1>
                 </div>
                 <div class="nav_profile">
-                    <a href="home.php">home</a>
-                    <a href="modif_mon_profil.php">Modification Profil</a>
-                    <a href="mes_annonces.php">Gérer mes annonces</a>
+                    <a href="home.php" class="a">home</a>
+                    <a href="modif_mon_profil.php" class="a">Modification Profil</a>
+                    <a href="mes_annonces.php" class="a">Gérer mes annonces</a>
                 </div>
                 <div class="annonces_profile">
                     <h2> Mes annonces : </h2><br>

@@ -138,7 +138,7 @@
                     <div class="map" id="map"></div>
 
 
-                    <a href="recherche.php">Retour</a>
+                    <a class="a" href="recherche.php">Retour</a>
                     <script type="text/javascript">
                             const buttons = document.querySelectorAll('a');
                             buttons.forEach(btn => {

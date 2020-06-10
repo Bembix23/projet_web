@@ -25,10 +25,10 @@
                 <img src="logo.png">
                 <!-- liens vers les annonces -->
                 <?php while($infos = $query->fetch()) {
-                        echo "<a class='button' href='modif_annonce.php?id={$infos["id"]}'>{$infos['titre']}</a>";
+                        echo "<a class='a' href='modif_annonce.php?id={$infos["id"]}'>{$infos['titre']}</a>";
                     }
                 ?>
-                <a href="mon_profil.php" class = "link_home">Retour</a>
+                <a href="mon_profil.php" class = "a">Retour</a>
                 <script type="text/javascript">
                         const buttons = document.querySelectorAll('a');
                         buttons.forEach(btn => {

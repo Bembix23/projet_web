@@ -63,8 +63,8 @@
                 </div>
 
                 <div class="back_to">
-                    <?php echo "<a href=$filedelete >Supprimer l'offre</a>"?>
-                    <a href="mes_annonces.php" class = "link_home">Retour</a>
+                    <?php echo "<a href=$filedelete class='a'>Supprimer l'offre</a>"?>
+                    <a href="mes_annonces.php" class = "a">Retour</a>
                     <script type="text/javascript">
                             const buttons = document.querySelectorAll('a');
                             buttons.forEach(btn => {

@@ -74,8 +74,8 @@
                     </form>
                 </div>
                 <div class="back">
-                    <a href = "deconnexion.php">Deconnexion</a>
-                    <a href="mon_profil.php" class = "link_home">Retour</a>
+                    <a class="a" href = "deconnexion.php">Deconnexion</a>
+                    <a class="a" href="mon_profil.php" class = "link_home">Retour</a>
                     <script type="text/javascript">
                             const buttons = document.querySelectorAll('a');
                             buttons.forEach(btn => {

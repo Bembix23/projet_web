@@ -17,7 +17,7 @@
                 </div>
                     
                 
-                <a href="index.php" class = "link_home">Retour</a>
+                <a href="index.php" class = "a">Retour</a>
                 <script type="text/javascript">
                             const buttons = document.querySelectorAll('a');
                             buttons.forEach(btn => {
