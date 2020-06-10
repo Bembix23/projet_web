@@ -13,6 +13,13 @@ body{
     background-color: rgb(243, 243, 213);
 }
 
+.map{
+    left: 0;
+    top: 0;
+    background-color: rgb(255, 0, 0);
+    height: 100vh;
+}
+
 
 .logo{
     float: left;
@@ -101,6 +108,9 @@ body{
 }
 .monq2{
     border-radius: 15px;
+    background-size: cover;
+    width: 600px;
+    height: 400px;
 }
 .imgAA{
     background-size: cover;
@@ -301,7 +311,6 @@ input:hover{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: -45px;
     border-radius: 40px;
 }
 .item .Atit{
@@ -315,7 +324,14 @@ input:hover{
     background-size: cover;
     width: 375px;
     height: 275px;
+    margin-top: -45px;
     border-radius: 40px;
+}
+.logo_X{
+    display: flex;
+    float: left;
+    flex-direction: column;
+    margin-right: 1500px;
 }
 
 .box{

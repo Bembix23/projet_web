@@ -28,6 +28,7 @@
                     
                 </div>    
                 <div class="recherche">  
+                    <!-- Formulaire de filtrage -->
                     <form action="recherche.php" method="post">
                         <h2 class="ou">Ou voulez vous aller ?</h2>
                         <input type="text" name="ville" placeholder="Ville" />

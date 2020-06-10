@@ -8,6 +8,7 @@
             <div class="co">
                 <img src="logo.png">
                 <div class="coco">
+                <!-- Formulaire de connexion -->
                     <form action="vérif_connexion.php" method="post">
                         <input type="email" name="email" placeholder="Adresse mail" />
                         <input type="password" name="password" placeholder="Mot de passe" />

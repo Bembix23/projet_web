@@ -2,6 +2,7 @@
     include('config.php');
     session_start();
 
+    //Requête qui récupère les inforamations lié à l'annonce choisi
     $query = $pdo->prepare("SELECT * FROM ProjetWeb.annonce WHERE id = {$_GET['id']}");
     $query->execute();
     $infos = $query->fetch();
@@ -21,6 +22,7 @@
                 </div>
                 <div class="descrip_1">
                     <?php
+                        //Infos sur l'annonce
                             echo "<div>";
                             $str_titre = strtolower($infos["titre"]);
 
@@ -31,12 +33,12 @@
 
                             echo "{$infos['description']}";
                             echo "</div>";
-                            //echo "<a href='réservation.php?id={$infos["id"]}'>Réserver</a>";
 
                         ?>
                 </div>
                 <div class="reserv_C">
                     <?php if (!empty($_SESSION["IS_CONNECTED"])) {
+                        //Formulaire de réservation (l'utilisateur doit être connecté)
                             echo "<form action='réservation.php?id={$infos["id"]}' method='post'>" ?>
                             <input type="number" name="nombre_locataire" placeholder="Nombre de locataire" />
                             <input type="date" name="Date_arrivé" placeholder="Date d'arrivé" />
@@ -46,6 +48,7 @@
                 </div>
                 <div class="reserv_D">
                     <?php }
+                        //Si l'utilisateur n'est pas connecté, affiche les boutons connexion et inscription
                             else {
                                 echo "Vous devez être connecté pour réservé un bien";
                                 echo '<a href="connexion.php" class = "link_home">Connexion</a>
@@ -56,6 +59,8 @@
                 <div class=info_AA>
                     <p>Prix à la nuit par personne : <?php echo $infos["prix_nuit"] ?>
                     <p>Nombre de place maximum : <?php echo $infos["nb_place"] ?><br>
+                    <div class="map" id="map"></div>
+                    <script src="app.js" type="application/js"></script>
                     <a href="recherche.php">Retour</a>
                     <script type="text/javascript">
                             const buttons = document.querySelectorAll('a');

@@ -10,6 +10,7 @@
     
     $str = strtolower($_SESSION["prenom"])."_".strtolower($_SESSION["nom"]);
 
+    //Récupère la photo de profil de l'utilisateur
     $fileDestination = "./profils/".$str."/".$str.".png";
 
     
@@ -28,10 +29,12 @@
                 <img src="logo.png"><h1>Firebee'n B</h1>
             </div>
             <div class="votete">
+                <!-- Affiche la photo de profil -->
                 <?php echo "<img class='vous' src='{$fileDestination}' widht=50px>";?>
             </div>
            
             <div class="rechercheH">
+                <!-- Formulaire de filtrage -->
                 <form action="recherche.php" method="post">
                     <h2 class="ou">Ou voulez vous aller ?</h2>
                     <input type="text" name="ville" placeholder="Ville" />

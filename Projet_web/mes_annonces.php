@@ -7,6 +7,7 @@
         exit;
     }
 
+    //Récupère les informations des annonces de l'utilisateur
     $query = $pdo->prepare("SELECT * FROM ProjetWeb.annonce WHERE id_annonceur = '{$_SESSION["id"]}'");
     $query->execute();
 
@@ -22,6 +23,7 @@
         <body>
             <div class="ma">
                 <img src="logo.png">
+                <!-- liens vers les annonces -->
                 <?php while($infos = $query->fetch()) {
                         echo "<a class='button' href='modif_annonce.php?id={$infos["id"]}'>{$infos['titre']}</a>";
                     }

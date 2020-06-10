@@ -32,6 +32,7 @@
                 </div>
                 <div class="annonces_profile">
                     <h2> Mes annonces : </h2><br>
+                    <!-- Affiche les annonces de l'utilisateur -->
                     <?php while($infos = $query->fetch()) {
                         $str_titre = strtolower($infos["titre"]);
                         $fileDestination = "./annonces/".$str_titre."/".$str_titre.".png";
