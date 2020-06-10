@@ -115,6 +115,7 @@ body{
     background-size: cover;
     width: 700px;
     height: 500px;
+    border-radius: 40px;
 }
 .quoi{
     margin: 10px;
