@@ -14,6 +14,80 @@
         <head>
             <title>Mes offres</title>
             <link rel="stylesheet" href="style.css" type="text/css">
+            <script src="https://maps.google.com/maps/api/js?key=AIzaSyAR72-2cHpkYIr7Mklz1jPeN7ISheBqtQE" type="text/javascript"></script>
+            <script async type="text/javascript">
+            // On initialise la latitude et la longitude de Paris (centre de la carte)
+                var lat = 48.852969;
+                var lon = 2.349903;
+                var map = null;
+                // Fonction d'initialisation de la carte
+                function initMap() {
+                    // Créer l'objet "map" et l'insèrer dans l'élément HTML qui a l'ID "map"
+                    map = new google.maps.Map(document.getElementById("map"), {
+                        // Nous plaçons le centre de la carte avec les coordonnées ci-dessus
+                        center: new google.maps.LatLng(lat, lon), 
+                        // Nous définissons le zoom par défaut
+                        zoom: 5, 
+                        // Nous définissons le type de carte (ici carte routière)
+                        mapTypeId: google.maps.MapTypeId.ROADMAP, 
+                        // Nous activons les options de contrôle de la carte (plan, satellite...)
+                        mapTypeControl: true,
+                        // Nous désactivons la roulette de souris
+                        scrollwheel: false, 
+                        mapTypeControlOptions: {
+                            // Cette option sert à définir comment les options se placent
+                            style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR 
+                        },
+                        // Activation des options de navigation dans la carte (zoom...)
+                        navigationControl: true, 
+                        navigationControlOptions: {
+                            // Comment ces options doivent-elles s'afficher
+                            style: google.maps.NavigationControlStyle.ZOOM_PAN 
+                        }
+                    });
+                }
+                window.onload = function(){
+                    // Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
+                    initMap(); 
+                };
+
+                // Nous initialisons une liste de marqueurs
+                var villes = {
+                    "Paris":{"lat": 48.852969,"lon": 2.349903},
+                };
+                function initMap() {
+                    map = new google.maps.Map(document.getElementById("map"), {
+                        center: new google.maps.LatLng(lat, lon),
+                        zoom: 5,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                        mapTypeControl: true,
+                        scrollwheel: false,
+                        mapTypeControlOptions: {
+                            style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR
+                        },
+                        navigationControl: true,
+                        navigationControlOptions: {
+                            style: google.maps.NavigationControlStyle.ZOOM_PAN
+                        }
+                    });
+                    // Nous parcourons la liste des villes
+                    for(ville in villes){
+                        // Nous ajoutons un marqueur
+                        var marker = new google.maps.Marker({
+                            // Nous définissons sa position (syntaxe json)
+                            position: {lat: lat, lng: lon},
+                            // Nous définissons à quelle carte il est ajouté
+                            map: map
+                        });
+                    }
+                }
+            </script>
+		<style type="text/css">
+			#map{ /* la carte DOIT avoir une hauteur sinon elle n'apparaît pas */
+				height:400px;
+				width:400px;
+			}
+		</style>
         </head>
         <body>
             <div class="AAA">
@@ -59,8 +133,11 @@
                 <div class=info_AA>
                     <p>Prix à la nuit par personne : <?php echo $infos["prix_nuit"] ?>
                     <p>Nombre de place maximum : <?php echo $infos["nb_place"] ?><br>
+
+
                     <div class="map" id="map"></div>
-                    <script src="app.js" type="application/js"></script>
+
+
                     <a href="recherche.php">Retour</a>
                     <script type="text/javascript">
                             const buttons = document.querySelectorAll('a');
