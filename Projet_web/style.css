@@ -53,7 +53,6 @@ body{
     justify-content: center;
 }
 .action{
-    position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -183,9 +182,7 @@ body{
 .nom_A{
     text-decoration: underline;
 }
-.AAA{
-    position: relative;
-}
+
 .descrip_1{
     margin-top: 20px;
     margin-right: 180px;
@@ -256,7 +253,7 @@ body{
         transform: scale(1, 1);
     }
 }
-span{
+.spaN{
     position: absolute;
     background: #fff;
     transform: translate(-50%,-50%);
@@ -332,6 +329,11 @@ input:hover{
     float: left;
     flex-direction: column;
     margin-right: 1500px;
+}
+#map{
+    height:600px;
+    width:1000px;
+    border-radius: 30px;
 }
 
 .box{

@@ -31,7 +31,7 @@
                         // Nous plaçons le centre de la carte avec les coordonnées ci-dessus
                         center: new google.maps.LatLng(lat, lon), 
                         // Nous définissons le zoom par défaut
-                        zoom: 5, 
+                        zoom: 13, 
                         // Nous définissons le type de carte (ici carte routière)
                         mapTypeId: google.maps.MapTypeId.ROADMAP, 
                         // Nous activons les options de contrôle de la carte (plan, satellite...)
@@ -62,7 +62,7 @@
                 function initMap() {
                     map = new google.maps.Map(document.getElementById("map"), {
                         center: new google.maps.LatLng(lat, lon),
-                        zoom: 5,
+                        zoom: 13,
                         mapTypeId: google.maps.MapTypeId.ROADMAP,
                         mapTypeControl: true,
                         scrollwheel: false,
@@ -86,12 +86,6 @@
                     }
                 }
             </script>
-		<style type="text/css">
-			#map{ /* la carte DOIT avoir une hauteur sinon elle n'apparaît pas */
-				height:400px;
-				width:400px;
-			}
-		</style>
         </head>
         <body>
             <div class="AAA">
@@ -139,9 +133,9 @@
                     <p>Nombre de place maximum : <?php echo $infos["nb_place"] ?><br>
 
 
-                    <div class="map" id="map"></div>
-
-
+                    <div id="map"></div>
+                </div>
+                <div class="action">
                     <a class="a" href="recherche.php">Retour</a>
                     <script type="text/javascript">
                             const buttons = document.querySelectorAll('a');
@@ -152,6 +146,7 @@
                                     let y = e.clientY - e.target.offsetTop;
 
                                     let ripples = document.createElement('span');
+                                    ripples.setAttribute("class", "spaN");
                                     ripples.style.left = x + 'px';
                                     ripples.style.top = y + 'px';
                                     this.appendChild(ripples);
@@ -162,7 +157,9 @@
                                 })
                             })
                         </script>
-                </div>
+                    </div>
+                    
+               
             
                    
         
