@@ -131,6 +131,7 @@
                 <div class=info_AA>
                     <p>Prix à la nuit par personne : <?php echo $infos["prix_nuit"] ?>
                     <p>Nombre de place maximum : <?php echo $infos["nb_place"] ?><br>
+                    <p class="lastone">Adresse : <?php echo $infos["adresse"] . " " . $infos["ville"] ?><br>
 
 
                     <div id="map"></div>
